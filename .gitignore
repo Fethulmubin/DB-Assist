@@ -1,1 +1,18 @@
 .env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Virtual envs
+.venv/
+venv/
+.envrc
+
+# OS/editor
+.DS_Store
+.vscode/
+.env
