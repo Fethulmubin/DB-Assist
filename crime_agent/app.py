@@ -23,7 +23,7 @@ def build_app(verbose: bool) -> CrimeKGAI:
     )
 
     llm = ChatGoogleGenerativeAI(
-        model=os.getenv("GEMINI_MODEL", "gemini-flash-latest"),
+        model=os.getenv("GEMINI_MODEL", "gemini-2.5-flash"),
         temperature=0,
         google_api_key=os.environ["GEMINI_API_KEY"],
     )

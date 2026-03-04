@@ -1,9 +1,9 @@
 # CrimeAgent — Natural Language → Neo4j (Gemini + LangChain)
 
-This project implements the **Intern Assignment: Natural Language to Knowledge Graph Query System**.
+This project implements the Natural Language to Knowledge Graph Query System**.
 It accepts plain-English questions, routes them to the right strategy (**graph traversal**, **vector search**, **hybrid**, or **agent**), validates generated Cypher with **confidence scoring + retry**, executes the query on Neo4j, and returns a clean natural-language answer.
 
-## Requirements Covered
+## Requirements
 
 - End-to-end pipeline: **NL → Cypher → Neo4j → NL answer**
 - Handles **graph**, **vector**, **hybrid**, and **agent** style questions
@@ -55,15 +55,6 @@ If you want to embed more, rerun it (or increase `--limit`):
 python setup_embeddings.py --limit 5000
 ```
 
-Optional customization:
-
-```bash
-python setup_embeddings.py \
-  --node-label Crime \
-  --index-name crime_embeddings \
-  --text-props type,last_outcome \
-  --embedding-prop embedding
-```
 
 ## Run
 
@@ -112,8 +103,3 @@ Agent (multi-step) example:
 Multi-turn memory example:
 1) "Who investigated crimes in area A1?"
 2) "How many crimes did they investigate?"  (should use context)
-
-## Notes
-
-- The assistant **rejects non-read-only Cypher** (no CREATE/MERGE/DELETE/SET/DROP).
-- If the system asks for clarification, give a more specific entity (e.g., `areaCode`, `badge_no`, `crime type`, or a person `name`).
