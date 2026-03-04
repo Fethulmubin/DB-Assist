@@ -49,12 +49,6 @@ By default this embeds up to **2000** `:Crime` nodes per run (incremental; only 
 python setup_embeddings.py
 ```
 
-If you want to embed more, rerun it (or increase `--limit`):
-
-```bash
-python setup_embeddings.py --limit 5000
-```
-
 
 ## Run
 
